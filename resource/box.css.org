@@ -1,0 +1,56 @@
+
+  .main-css{
+    /* 中央揃え */
+    margin: 0 auto;
+  }
+
+  .hide-box{
+    display: none; 
+    flex-wrap: wrap;
+    width: 600pt;
+    background-color: blanchedalmond;
+    justify-content: space-between;
+    border-color: darkmagenta;
+    align-content: stretch;
+    
+  }
+
+
+  .show-box{
+    display: flex; 
+    flex-wrap: wrap;
+    width: 600pt;
+    margin: 0 auto;
+    background-color: blanchedalmond;
+    border-color:black;
+    justify-content: space-between;
+    align-content: stretch;
+    
+  }
+  
+  .item-collector{
+    flex: 1;
+    border: 2px solid gray;
+    width: 400pt;
+    height: 100pt;
+    flex-basis: 20%;
+    columns: 10;
+  }
+
+  .select-text{
+    width: 600pt;
+  background-color: white;
+  border: 1px solid gray;
+  
+}
+.select-button{
+  background-color: white;
+  color: black;
+  border: 1px solid gray;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 1rem;
+  outline: none;
+  width: 150pt;
+}

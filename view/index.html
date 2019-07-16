@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <title>{{.Title}}</title>
+    <link rel="stylesheet" href="./data/box.css">
+    <link rel="stylesheet" href="../resource/box.css">
+</header>
+<header>
+    <nav class="prof-zone">
+        <a href="http://profile.hatena.ne.jp/kappa_live/">作った人</a>
+    </nav>
+    <h2 class="apl-head">ひたすらソート</h2>
+</header>
+
+<body>
+
+    <div class="parent-box">
+        <!-- 見た目制御用の属性 -->
+        <div class={{.ItemView}}>
+            <form action=/start method=post>
+
+                <table class="input-tbl">
+                    <tr>
+                        <td rowspan="0">
+                            ソートしたいお題を入力してください:<br>
+                            <input type="text" class="text-zone" name="inputtheme" autocomplete="off"
+                                placeholder="お題（任意）e.g.色。とすると色ソートになります。"></input>
+                            <input type="text" class="text-zone" name="inputdescription" autocomplete="off"
+                                placeholder="説明（任意）e.g.好きな色は？"></input>
+                            <textarea type="text" name="inputitems" class="input-textarea"></textarea>
+                        </td>
+                        <td>
+                            <input type="submit" class="select-button" value="はじめる"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+
+                        </td>
+                    </tr>
+                </table>
+
+
+
+
+            </form>
+        </div>
+        <div class={{.SortView}}>
+            <form action=/sel method=post>
+                <p class="select-text">
+                    いずれかのボタンをクリックしてください。<br> {{.Description}}
+                </p>
+                <input type="submit" name="valA" class="select-button" value={{.ValA}}></input>
+                <input type="submit" name="eq" class="select-button" value="同じ"></input>
+                <input type="submit" name="valB" class="select-button" value={{.ValB}}></input>
+            </form>
+        </div>
+        <div class={{.ResultView}}>
+
+            <h1>結果表示</h1>
+
+
+            <h3>{{.Description}} #{{.Title}}</h3>
+
+            <br>
+            <table>
+                <tr>
+                    <th>順位</td>
+                    <th>名前</td>
+                </tr>
+
+                {{range $index, $list := .Data}}
+                <tr>
+                    <td>{{$list.Rankno}}.</td>
+                    <td>{{$list.Item}}</td>
+                </tr>
+                {{end}}
+            </table>
+
+            <a href="/init">最初の画面に戻る</a>
+        </div>
+    </div>
+    <br>
+
+</body>
+
+</html>

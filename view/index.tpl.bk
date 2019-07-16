@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <title>{{.Title}}</title>
+    <link rel="stylesheet" href="./data/box.css">
+</header>
+
+<body>
+    <div class="item-box"　    display= flex; >
+        <form action=/start method=post >
+        {{.Title}}
+            <textarea type="text" name="inputitems" class="item-collector"></textarea>
+
+            <input type="submit" class="ghost-button" value="はじめる"></input>
+        </form>
+    </div>
+
+    <div class="sort-box">
+        <form action=/sel method=post>
+            <p>
+                いずれかのボタンをクリックしてください。
+                [{{.ValA}}] と [{{.ValB}}]
+            </p>
+            <input type="submit" name="valA" class="ghost-button" value={{.ValA}}></input>
+            <input type="submit" name="eq"class="ghost-button" value="同じ"></input>
+            <input type="submit" name="valB"class="ghost-button" value={{.ValB}}></input>
+        </form>
+    </div>
+    <div class="result-box">
+        <p>結果表示</p>
+
+        <!-- 結果用ループ -->
+
+        <table>
+            {{range $index, $list := .Data}}
+            <tr>
+                <td> {{$list.No}} </td>
+                <td> {{$list.Item}} </td>
+            </tr>
+            {{end}}
+        </table>
+    </div>
+
+
+</body>
+
+</html>

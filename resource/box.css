@@ -1,0 +1,100 @@
+/* 表示切替用コンテナ設定 */
+
+.show-box {
+    /* 親コンテナ設定 */
+    display: flex;
+    /* 中央揃え */
+    margin: 0 auto;
+    /* 横方向に並べる */
+    flex-direction: row;
+    
+    /* 中央に置く */
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+.cols-box {
+    /* 親コンテナ設定 */
+    display: flex;
+    /* 中央揃え */
+    margin: 0 auto;
+    /* 横方向に並べる */
+    flex-direction: column;
+    /* 中央に置く */
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+.hide-box {
+    display: none;
+}
+
+
+/* 入力エリアの設定 */
+
+.input-textarea {
+    height: 200pt;
+    width: 99%;
+}
+
+.prof-zone{
+    text-align: right;
+}
+
+.text-zone{
+    height: 20pt;
+    width: 99%;
+}
+/* テーブルタグの見た目 */
+
+.apl-head{
+    text-align: center;
+}
+
+table,
+td,
+th {
+    border: 1px #00000F solid;
+}
+
+
+
+
+/* ボタン */
+
+.select-button {
+    /* 背景色 */
+    background-color: white;
+    /* 文字色 */
+    color: black;
+    /* 線 */
+    border: 1px solid gray;
+    /* ボタンの丸美 */
+    border-radius: 20px;
+    /* カーソルの形 */
+    cursor: pointer;
+    /* 装飾なし */
+    text-decoration: none;
+    /* 余白をいい感じにしてくれる */
+    padding: 1rem;
+    /* 高さ */
+    height: 40pt;
+    /* 幅 */
+    width: 150pt;
+}
+
+
+/* 子BOXの設定 */
+
+.input-tbl {
+    border: 0px #00000F;
+    border-style: groove;
+}
+
+.btn-box {
+    /* 背景色指定 */
+    background-color: violet;
+}
+
