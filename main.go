@@ -48,6 +48,8 @@ type ItemInfo struct {
 	Point  int
 }
 
+
+// main is 開始処理
 func main() {
 	fs := http.FileServer(http.Dir("./resource"))
 
